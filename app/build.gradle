@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.2"
+
+    defaultConfig {
+        applicationId "com.example.gyatsina.mytesting"
+        minSdkVersion 17
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        sourceSets {
+            main {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java.srcDirs = ['src/main/java']
+                resources.srcDirs = ['src/main/java']
+                renderscript.srcDirs = ['src/main/java']
+                res.srcDirs = ['src/main/res']
+                assets.srcDirs = ['assets']
+            }
+
+            androidTest.setRoot('src/tests')
+            androidTest.java.srcDirs = ['src/tests/src']
+        }
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
