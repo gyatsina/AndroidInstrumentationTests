@@ -21,8 +21,10 @@ android {
             androidTest.java.srcDirs = ['src/tests/src']
         }
   }
+  
 - Create folder following the marked route.
-Result: "src" folder in "tests" should be coloured in green and to be runnable.
 
-3. Package for test project should differ from main application package.
-4. http://developer.android.com/tools/testing/testing_android.html
+- Result: "src" folder in "tests" should be coloured in green and to be runnable.
+
+3.Package for test project should differ from main application package.
+4.http://developer.android.com/tools/testing/testing_android.html
