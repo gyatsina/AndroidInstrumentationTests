@@ -5,7 +5,6 @@ app/src/tests
 
 2. How to set test folder?
 - In build.gradle file in section android mark source, f.i:
-- 
 android {
 
         sourceSets {
