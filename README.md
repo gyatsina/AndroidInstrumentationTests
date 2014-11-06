@@ -5,6 +5,7 @@ app/src/tests
 
 2. How to set test folder?
 - In build.gradle file in section android mark source, f.i:
+
 android {
         sourceSets {
             main {
@@ -15,10 +16,10 @@ android {
                 res.srcDirs = ['src/main/res']
                 assets.srcDirs = ['assets']
             }
-
             androidTest.setRoot('src/tests')
             androidTest.java.srcDirs = ['src/tests/src']
         }
   }
+  
 - Create folder following the marked route.
 Result: "src" folder in "tests" should be coloured in green and to be runnable.
